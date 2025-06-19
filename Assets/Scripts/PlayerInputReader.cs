@@ -30,11 +30,11 @@ public class PlayerInputReader : MonoBehaviour
 
         if (Input.GetMouseButton(1))
         {
-            aimLayer.weight += Time.deltaTime / aimDuration;
+            //aimLayer.weight += Time.deltaTime / aimDuration;
         }
         else
         {
-            aimLayer.weight -= Time.deltaTime / aimDuration;
+           // aimLayer.weight -= Time.deltaTime / aimDuration;
         }
     }
 
