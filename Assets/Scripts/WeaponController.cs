@@ -6,10 +6,7 @@ public class WeaponController : MonoBehaviour
     public PlayerInputReader input;
     public ParticleSystem particle;
 
-    private void Start()
-    {
-        particle.Stop();
-    }
+    
     void Update()
     {
         if (input.IsFiring && currentWeapon != null && currentWeapon.CanFire() && input.IsAiming)
@@ -18,6 +15,10 @@ public class WeaponController : MonoBehaviour
             currentWeapon.Fire();
             particle.Play();
 
+        }
+        else
+        {
+            particle.Stop(true);
         }
     }
 }
